@@ -55,17 +55,17 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <nav>
-            <li> <Link to='/react-host/'> Home </Link> </li>
-            <li> <Link to='/react-host/users'> User </Link> </li>
-            <li> <Link to='/react-host/tabel'> Tabel </Link> </li>
+            <li> <Link to='/'> Home </Link> </li>
+            <li> <Link to='/users'> User </Link> </li>
+            <li> <Link to='/tabel'> Tabel </Link> </li>
           </nav>
 
           <main>
             <Switch>
-              <Route path='/react-host/' exact component={Home} />
-              <Route path='/react-host/users' exact component={ListView} />
-              <Route path='/react-host/user/:name' exact component={DetailView} />
-              <Route path='/react-host/tabel' exact >
+              <Route path='/' exact component={Home} />
+              <Route path='/users' exact component={ListView} />
+              <Route path='/user/:name' exact component={DetailView} />
+              <Route path='/tabel' exact >
                     <Column />
               </Route>
               <Route component={NoMatch} />
